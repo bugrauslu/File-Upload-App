@@ -1,6 +1,5 @@
 # File-Upload-App
 
-
 Installation
 To run this project, install it locally using npm:
 
