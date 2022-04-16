@@ -1,0 +1,113 @@
+<h1>admin page</h1>
+
+
+
+<style>
+
+body {
+    background: #eee
+}
+
+.item .item-content {
+    padding: 30px 35px
+}
+
+.image-upload {
+    width: 100%;
+    height: 600px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    background: #f8f8f9;
+    color: #666;
+    overflow: hidden
+}
+
+.item-wrapper form img {
+    margin-bottom: 20px;
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    width: auto;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.image-upload img {
+    height: 100% !important;
+    width: auto !important;
+    border-radius: 0px;
+    margin: 0 auto
+}
+
+.image-upload i {
+    font-size: 6em;
+    color: #ccc
+}
+
+.image-upload input {
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.item-wrapper input {
+    height: 43px;
+    line-height: 43px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px
+}
+.resimKapsayici {position:relative}
+.resimYazisi {position:absolute;left:10px;top:10px;}
+</style>
+
+<form action="/admin/upload" method="get">
+    <button type="submit" style="border: 2px solid purple;border-radius: 12px;padding:5px;">Uploaded files</button>
+</form>
+
+<div class="item-wrapper one">
+    <div class="item">
+        <form data-validation="true" action="/admin/upload" method="post" enctype="multipart/form-data">
+            <div class="item-inner">
+                <div class="item-content">
+                    <div class="image-upload"> 
+                        <label style="cursor: pointer;" for="file_upload">
+                             <img src="" alt="" class="uploaded-image">
+                            <div class="h-100">
+                                <div class="dplay-tbl">
+                                    <div class="dplay-tbl-cell"> 
+                                        <i class="fa fa-cloud-upload"></i>
+
+                                        <div class="resimKapsayici">
+                                            <img src="/admin/img/upload-files.jpg">
+                                            <p class="resimYazisi"><h5><b>Choose Your Image to Upload</b></h5></p>
+                                        </div>
+                                            <button type="submit">
+                                                <strong>upload</strong></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--upload-content--> <input  type="file" name="file" id="file_upload" class="image-input" value="">
+                        </label> </div>
+                </div>
+                <!--item-content-->
+            </div>
+            <!--item-inner-->
+        </form>
+    </div>
+    <!--item-->
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

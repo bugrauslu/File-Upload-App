@@ -1,0 +1,28 @@
+<h1>uploads</h1>
+
+<% resultoffiles.forEach(element => { %>
+    <form action="<%=element.sharelink %> " method="post">
+    <div class="card" style="width: 18rem;">
+        <i class="fas fa-file file" ></i>
+        <div class="card-body">
+          <p class="card-text" style="padding-left:57px; font-size: 30px; color:purple;  "><b>File name</b> </p>
+          <p class="card-text"><%=element.file %> </p>
+          <p class="card-text" style="padding-left:30px; font-size: 20px; color:purple;  "><b>share download link</b></p>
+          
+          <p class="card-text" style="color: blue;"><%=element.sharelink %>  </p>
+          <button type="submit" class="downlad" style="width: 250px;">download</button>
+        </form><hr>
+        <form action="/admin/delete-file" method="post">
+          <input type="hidden" name="filename" value="<%=element.file %> ">
+          <button type="submit" style="width: 250px; background-color: rgb(206, 15, 15); color: white;">delete file</button>
+         </form>
+    
+        </div>
+      </div>
+    
+     
+<% }) %>
+
+
+
+
